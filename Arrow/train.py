@@ -19,8 +19,8 @@ in_chnnel = 3
 num_classes = 4
 learning_rate = 1e-3
 batch_size = 32
-num_epochs = 10
-no1 = 1
+num_epochs = 100
+no1 = 29
 load_model = True
 
 # Load Data
@@ -43,6 +43,26 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 #model.load_state_dict(torch.load("C:/Download/runes/no1_checkpoint.pth.tar"))
 #model.eval()
 # Train Network
+def check_accuracy(loader, model):
+    num_correct = 0
+    num_samples = 0
+    model.eval()
+
+    with torch.no_grad():
+        for x, y in loader:
+            x = x.to(device=device)
+            y = y.to(device=device)
+
+            scores = model(x)
+            _, predictions = scores.max(1)
+            num_correct += (predictions == y).sum()
+            num_samples += predictions.size(0)
+
+        print(f'Got {num_correct} / {num_samples} with accuracy {float(num_correct) / float(num_samples) * 100}')
+
+    model.train()
+    return num_correct
+
 for epoch in range(num_epochs):
     losses = []
 
@@ -64,29 +84,12 @@ for epoch in range(num_epochs):
         #gradient decent or adam step
         optimizer.step()
     print(f'Cost at epoch {epoch} is {sum(losses)/len(losses)}')
-    if sum(losses)/len(losses) < no1:
-        no1 = sum(losses)/len(losses)
+    check = check_accuracy(test_loader, model)
+    if check > no1:
+        no1 = check
         #checkpoint = {'state_dict' : model.state_dict(), 'optimizer' : optimizer.state_dict()}
+        print("save")
         torch.save(model.state_dict(), "C:/Download/runes/no1_checkpoint2.pt")
-
-def check_accuracy(loader, model):
-    num_correct = 0
-    num_samples = 0
-    model.eval()
-
-    with torch.no_grad():
-        for x, y in loader:
-            x = x.to(device=device)
-            y = y.to(device=device)
-
-            scores = model(x)
-            _, predictions = scores.max(1)
-            num_correct += (predictions == y).sum()
-            num_samples += predictions.size(0)
-
-        print(f'Got {num_correct} / {num_samples} with accuracy {float(num_correct)/float(num_samples)*100}')
-
-    model.train()
 
 print("Checking accuracy on Training Set")
 check_accuracy(train_loader, model)
