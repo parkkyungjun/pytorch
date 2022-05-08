@@ -19,7 +19,7 @@ in_chnnel = 3
 num_classes = 4
 learning_rate = 1e-3
 batch_size = 32
-num_epochs = 100
+num_epochs = 10
 no1 = 1
 load_model = True
 
