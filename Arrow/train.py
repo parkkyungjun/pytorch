@@ -40,7 +40,7 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 #if load_model:
     #load_checkpoint(torch.load("C:/Download/runes/no1_checkpoint.pth.tar"))
-#model.load_state_dict(torch.load("C:/Download/runes/no1_checkpoint.pth.tar"))
+model.load_state_dict(torch.load("C:/Download/runes/no1_checkpoint2.pt"))
 #model.eval()
 # Train Network
 def check_accuracy(loader, model):
@@ -63,33 +63,33 @@ def check_accuracy(loader, model):
     model.train()
     return num_correct
 
-for epoch in range(num_epochs):
-    losses = []
-
-    for batch_idx, (data, target) in enumerate(train_loader):
-        # Get data to cuda if possible
-        data = data.to(device=device)
-        target = target.to(device=device)
-
-        # forward
-        scores = model(data)
-        loss = criterion(scores, target)
-
-        losses.append(loss.item())
-
-        # backward
-        optimizer.zero_grad()
-        loss.backward()
-
-        #gradient decent or adam step
-        optimizer.step()
-    print(f'Cost at epoch {epoch} is {sum(losses)/len(losses)}')
-    check = check_accuracy(test_loader, model)
-    if check > no1:
-        no1 = check
-        #checkpoint = {'state_dict' : model.state_dict(), 'optimizer' : optimizer.state_dict()}
-        print("save")
-        torch.save(model.state_dict(), "C:/Download/runes/no1_checkpoint2.pt")
+# for epoch in range(num_epochs):
+#     losses = []
+#
+#     for batch_idx, (data, target) in enumerate(train_loader):
+#         # Get data to cuda if possible
+#         data = data.to(device=device)
+#         target = target.to(device=device)
+#
+#         # forward
+#         scores = model(data)
+#         loss = criterion(scores, target)
+#
+#         losses.append(loss.item())
+#
+#         # backward
+#         optimizer.zero_grad()
+#         loss.backward()
+#
+#         #gradient decent or adam step
+#         optimizer.step()
+#     print(f'Cost at epoch {epoch} is {sum(losses)/len(losses)}')
+#     check = check_accuracy(test_loader, model)
+#     if check > no1:
+#         no1 = check
+#         #checkpoint = {'state_dict' : model.state_dict(), 'optimizer' : optimizer.state_dict()}
+#         print("save")
+#         torch.save(model.state_dict(), "C:/Download/runes/no1_checkpoint2.pt")
 
 print("Checking accuracy on Training Set")
 check_accuracy(train_loader, model)
