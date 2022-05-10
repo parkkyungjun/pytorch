@@ -18,7 +18,7 @@ class NN(nn.Module):
         return x
 
 class CNN(nn.Module):
-    def __init__(self, in_channels=1, num_classes=7):
+    def __init__(self, in_channels=1, num_classes=15):
         super(CNN, self).__init__()
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=8, kernel_size=(3,3), stride=(1,1), padding=(1,1))
         self.pool = nn.MaxPool2d(kernel_size=(2,2), stride=(2,2))
@@ -39,25 +39,26 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 #Hyperparameters
 in_chnnel = 1
-num_classes = 7
+num_classes = 15
 learning_rate = 0.001
-batch_size = 32
-num_epochs = 10
-save_point = 1800
+batch_size = 64
+num_epochs = 100
+save_point = 4500
 # Load Data
-dataset = init_dataset(csv_file='D:/Training/WINTEC/label_7.csv', root_dir='D:/Training/WINTEC/Train_7',
+dataset = init_dataset(csv_file='D:/Training/WINTEC/label_15.csv', root_dir='D:/Training/WINTEC/Train_new',
                 transform = transforms.ToTensor())
-train_set, test_set = torch.utils.data.random_split(dataset, [24854, 6000])
+train_set, test_set = torch.utils.data.random_split(dataset, [24627, 7000])
 train_loader = DataLoader(dataset=train_set, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(dataset=test_set, batch_size=batch_size, shuffle=True)
-test_dataset = init_dataset(csv_file='D:/Training/WINTEC/label_test_7.csv', root_dir='D:/Training/WINTEC/insp_test1',
-                            transform = transforms.ToTensor())
-r_train_set, r_test_set = torch.utils.data.random_split(test_dataset,[3303,1000])
-r_test_loader = DataLoader(dataset=r_train_set, batch_size=batch_size, shuffle=True)
+#test_dataset = init_dataset(csv_file='D:/Training/WINTEC/label_test_7.csv', root_dir='D:/Training/WINTEC/insp_test1',
+#                            transform = transforms.ToTensor())
+#r_train_set, r_test_set = torch.utils.data.random_split(test_dataset,[3303,1000])
+#r_test_loader = DataLoader(dataset=r_train_set, batch_size=batch_size, shuffle=True)
 # Initialize nework
-model = CNN().to(device)
-model.load_state_dict(torch.load('D:/Training/WINTEC/pt/test_7.pt'))
-model.eval()
+#model = CNN().to(device)
+#model.load_state_dict(torch.load('D:/Training/WINTEC/pt/test_7.pt'))
+model = torch.load('D:/Training/WINTEC/pt/test_15.pt')
+#model.eval()
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -116,16 +117,16 @@ for epoch in range(num_epochs):
         #gradient decent or adam step
         optimizer.step()
         #print("traing....")
-    check_every_epoch = check_accuracy(r_test_loader, model)
+    check_every_epoch = check_accuracy(test_loader, model)
     if check_every_epoch > save_point:
-        torch.save(model.state_dict(), 'D:/Training/WINTEC/pt/test_7.pt')
+        torch.save(model, 'D:/Training/WINTEC/pt/test_15.pt')
         save_point = check_every_epoch
         print("save model...")
 
 
 # Check accuracy on training & test to see how good our model
 
-torch.save(model.state_dict(), 'D:/Training/WINTEC/pt/final_7.pt')
+torch.save(model, 'D:/Training/WINTEC/pt/final_15.pt')
 
 print("Checking accuracy on Training Set")
 check_accuracy(train_loader, model)

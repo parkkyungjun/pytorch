@@ -30,9 +30,9 @@ class init_dataset(Dataset):
         # except (IOError, SyntaxError) as e:
         #     print('Bad file: ', img_path)
         #     return
-        #image = io.imread(img_path, plugin='matplotlib')
-        image = cv2.imread(img_path)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        image = io.imread(img_path, plugin='matplotlib')
+        #image = cv2.imread(img_path)
+        #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         y_label = torch.tensor(int(self.annotations.iloc[index, 1]))
 
@@ -103,4 +103,4 @@ def __excel__():
     #
     # df = pd.DataFrame({'file': png_list, 'label': label_list})
     # df.to_csv(csv_dir, index=False)
-__excel__()
+#__excel__()
