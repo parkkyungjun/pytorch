@@ -1,0 +1,13 @@
+# 모든 것을 제외한다
+/*
+
+# main
+!/Arrow/main.py
+!/Arrow/train.py
+!/Arrow/train2.py
+
+#readme
+!/README.md
+
+#gitignore
+!/.gitignore
