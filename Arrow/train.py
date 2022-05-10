@@ -4,7 +4,7 @@ import torch.optim as optim
 import torchvision.transforms as transforms
 import torchvision
 from torch.utils.data import DataLoader
-from main import runse
+#from main import runse
 
 def load_checkpoint(checkpoint):
     print("=> Loading checkpoint")
