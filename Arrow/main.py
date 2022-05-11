@@ -84,12 +84,15 @@ def __excel__():
     for i in range(len(all_list)):
         bmp_list = os.listdir(all_list[i])
         bmp_list = [all_list[i] + '/' + j for j in bmp_list]
-        label_list = [i for j in range(len(bmp_list))]
+        #label_list = [i for j in range(len(bmp_list))]
+        for j in bmp_list:
+            img = cv2.imread(j,cv2.IMREAD_GRAYSCALE)
+            cv2.imwrite(j,img)
         #print(label_list)
-        data = pd.DataFrame({'file': bmp_list, 'label' : label_list})
+        #data = pd.DataFrame({'file': bmp_list, 'label' : label_list})
         #print(data)
-        df = pd.concat([df, data])
-    df.to_csv(csv_dir, index=False)
+        #df = pd.concat([df, data])
+    #df.to_csv(csv_dir, index=False)
 
 
 
@@ -103,4 +106,4 @@ def __excel__():
     #
     # df = pd.DataFrame({'file': png_list, 'label': label_list})
     # df.to_csv(csv_dir, index=False)
-#__excel__()
+__excel__()
