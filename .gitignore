@@ -6,4 +6,5 @@
 *.zip
 *.jpeg
 *.pt
-
+*.csv
+*.xml
