@@ -20,12 +20,12 @@ class runse(Dataset):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
         image = io.imread(img_path)
 
-        y_label = torch.tensor(int(self.annotations.iloc[index, 1]))
+        y_label = torch.tensor(self.annotations.iloc[index, 1])
 
         if self.transform:
             image = self.transform(image)
-
-        return (image, y_label)
+        #print(img_path, y_label)
+        return image, y_label, img_path
 
 
 def __excel__():
@@ -40,4 +40,4 @@ def __excel__():
 
     df = pd.DataFrame({'file': png_list, 'label': label_list})
     df.to_csv(csv_dir, index=False)
-__excel__()
+#__excel__()
