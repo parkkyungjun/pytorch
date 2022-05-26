@@ -6,9 +6,13 @@ import torch.optim as optim
 import torchvision.transforms as transforms
 import torchvision
 from torch.utils.data import DataLoader
+<<<<<<< HEAD
 from main import runse
 from model import NET
 from model import CNNclassification
+=======
+#from main import runse
+>>>>>>> cdf96ea6a41f66fbfdeb1057def4173cc5f085fc
 
 def load_checkpoint(checkpoint):
     print("=> Loading checkpoint")
