@@ -3,6 +3,18 @@ import pandas as pd
 import os
 from torch.utils.data import Dataset
 from skimage import io
+import cv2
+
+def abc():
+    an = pd.read_csv('train.csv')
+    for index in range(len(an)):
+        img_path = os.path.join('train', an.iloc[index, 0])
+        image = cv2.imread(img_path)
+        image = cv2.resize(image,(299,299),image)
+        a = str(an.iloc[index, 0])
+        # os.mkdir('test_299')
+        cv2.imwrite(f'train_299/{a}', image)
+
 
 class init_dataset(Dataset):
     def __init__(self, csv_file, root_dir, transform=None):
@@ -17,12 +29,13 @@ class init_dataset(Dataset):
         img_path = os.path.join(self.root_dir, self.annotations.iloc[index, 0])
         image = io.imread(img_path)
 
-        y_label = torch.tensor(self.annotations.iloc[index, 1])
+        y_label = torch.tensor(int(self.annotations.iloc[index, 1]))
 
         if self.transform:
             image = self.transform(image)
 
         return image, y_label
+
 
 def __input__():
     label_df = pd.read_csv("train.csv")
@@ -48,16 +61,22 @@ def __differ__():
     google16l = pd.read_csv("googlenet_16/submission_last.csv")
     efficientl = pd.read_csv("efficientnet_b1_16/submission_last.csv")
     google32l = pd.read_csv("googlenet_32/submission_last.csv")
-    google8 = pd.read_csv("googlenet_8/suhwa_last.csv")
-    google8l = pd.read_csv('suhwa_100.csv')
+    google8 = pd.read_csv("submission.csv")
+    google8l = pd.read_csv('suhwa_5.csv')
+    asd = pd.read_csv('D:/pythonProject/tyu/save/asd.csv')
     #print(google['label'].dtype, efficient['label'].dtype)
     #result = pd.concat([google16['label'],efficient['label'], google32['label'], google32l['label'], google16l['label'], efficientl['label']], axis=1)
-    result = pd.concat([google8['label'], google8l['label']],axis=1)
+    #result = pd.concat([google8['label'], google8l['label']],axis=1)
     #result.columns = ['google16', 'effi', 'google32', "google32l", "google16l", "effil"]
-    result.columns = ['google8', 'google8l']
+    #result.columns = ['google8', 'google8l']
     #pd.set_option('display.max_row',500)
-    print(result.loc[result['google8'] != result['google8l']])
-
+    #print(result.loc[result['google8'] != result['google8l']])
+    ng = 0
+    for i in range(len(google8)):
+        if google8['label'][i] != google8l['label'][i]:
+            #print(i, google8['label'][i], google8l['label'][i])
+            ng += 1
+    print(f'Accuracy : {(len(google8)-ng) / len(google8)}%')
     #print(result)
     #result['result'] = 0
     # rr = []
@@ -76,6 +95,6 @@ def __differ__():
 
 
 
-__differ__()
-#__input__()
-#__output__()
+# __differ__()
+# __input__()
+# __output__()
