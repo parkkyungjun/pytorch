@@ -1,0 +1,157 @@
+2022-06-07 23:35:44,047 INFO    MainThread:21896 [internal.py:wandb_internal():90] W&B internal server running at pid: 21896, started at: 2022-06-07 23:35:44.047313
+2022-06-07 23:35:44,049 INFO    WriterThread:21896 [datastore.py:open_for_write():75] open: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\run-1jzu2v90.wandb
+2022-06-07 23:35:44,052 DEBUG   SenderThread:21896 [sender.py:send():232] send: header
+2022-06-07 23:35:44,052 DEBUG   SenderThread:21896 [sender.py:send():232] send: run
+2022-06-07 23:35:44,375 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: check_version
+2022-06-07 23:35:44,375 INFO    SenderThread:21896 [dir_watcher.py:__init__():197] watching files in: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files
+2022-06-07 23:35:44,375 INFO    SenderThread:21896 [sender.py:_start_run_threads():811] run started: 1jzu2v90 with start time 1654612542
+2022-06-07 23:35:44,375 DEBUG   SenderThread:21896 [sender.py:send():232] send: summary
+2022-06-07 23:35:44,375 INFO    SenderThread:21896 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-07 23:35:44,375 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: check_version
+2022-06-07 23:35:44,438 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: run_start
+2022-06-07 23:35:44,469 DEBUG   HandlerThread:21896 [meta.py:__init__():35] meta init
+2022-06-07 23:35:44,469 DEBUG   HandlerThread:21896 [meta.py:__init__():49] meta init done
+2022-06-07 23:35:44,469 DEBUG   HandlerThread:21896 [meta.py:probe():209] probe
+2022-06-07 23:35:44,547 DEBUG   HandlerThread:21896 [git.py:repo():29] git repository is invalid
+2022-06-07 23:35:44,547 DEBUG   HandlerThread:21896 [meta.py:_save_pip():53] save pip
+2022-06-07 23:35:44,563 DEBUG   HandlerThread:21896 [meta.py:_save_pip():67] save pip done
+2022-06-07 23:35:44,563 DEBUG   HandlerThread:21896 [meta.py:_save_conda():74] save conda
+2022-06-07 23:35:45,391 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_created():244] file/dir created: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\conda-environment.yaml
+2022-06-07 23:35:45,391 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_created():244] file/dir created: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-summary.json
+2022-06-07 23:35:45,391 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_created():244] file/dir created: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\requirements.txt
+2022-06-07 23:35:48,308 DEBUG   HandlerThread:21896 [meta.py:_save_conda():84] save conda done
+2022-06-07 23:35:48,308 DEBUG   HandlerThread:21896 [meta.py:probe():247] probe done
+2022-06-07 23:35:48,314 DEBUG   SenderThread:21896 [sender.py:send():232] send: files
+2022-06-07 23:35:48,314 INFO    SenderThread:21896 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-07 23:35:48,314 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-07 23:35:48,314 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: stop_status
+2022-06-07 23:35:48,408 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\conda-environment.yaml
+2022-06-07 23:35:48,408 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_created():244] file/dir created: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-metadata.json
+2022-06-07 23:35:48,408 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_created():244] file/dir created: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\output.log
+2022-06-07 23:35:48,519 DEBUG   SenderThread:21896 [sender.py:send():232] send: telemetry
+2022-06-07 23:35:48,519 DEBUG   SenderThread:21896 [sender.py:send():232] send: telemetry
+2022-06-07 23:35:48,519 DEBUG   SenderThread:21896 [sender.py:send():232] send: run
+2022-06-07 23:35:48,754 INFO    SenderThread:21896 [sender.py:send_run():707] updated run: 1jzu2v90
+2022-06-07 23:35:48,754 DEBUG   SenderThread:21896 [sender.py:send():232] send: config
+2022-06-07 23:35:48,754 DEBUG   SenderThread:21896 [sender.py:send():232] send: telemetry
+2022-06-07 23:35:48,754 DEBUG   SenderThread:21896 [sender.py:send():232] send: telemetry
+2022-06-07 23:35:49,115 INFO    Thread-15 :21896 [upload_job.py:push():132] Uploaded file C:\Users\rudwn\AppData\Local\Temp\tmp9bfcqhbywandb\pr6ib9x6-wandb-metadata.json
+2022-06-07 23:35:49,351 DEBUG   SenderThread:21896 [sender.py:send():232] send: exit
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:send_exit():368] handling exit code: 1
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:send_exit():370] handling runtime: 4
+2022-06-07 23:35:49,351 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:send_exit():376] send defer
+2022-06-07 23:35:49,351 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:49,351 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,351 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 0
+2022-06-07 23:35:49,351 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-06-07 23:35:49,351 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 1
+2022-06-07 23:35:49,351 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,351 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 1
+2022-06-07 23:35:49,414 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-summary.json
+2022-06-07 23:35:49,414 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\output.log
+2022-06-07 23:35:49,414 INFO    Thread-11 :21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\config.yaml
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,462 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 2
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send():232] send: stats
+2022-06-07 23:35:49,462 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,462 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 2
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 3
+2022-06-07 23:35:49,462 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,462 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 3
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 4
+2022-06-07 23:35:49,462 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,462 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 4
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send():232] send: summary
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-07 23:35:49,462 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-06-07 23:35:49,462 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 5
+2022-06-07 23:35:49,462 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,462 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 5
+2022-06-07 23:35:49,477 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,477 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-06-07 23:35:49,571 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:49,790 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 6
+2022-06-07 23:35:49,790 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:49,790 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:49,790 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 6
+2022-06-07 23:35:49,790 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:49,790 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-06-07 23:35:49,790 INFO    SenderThread:21896 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-06-07 23:35:49,900 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-summary.json
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:_on_file_modified():257] file/dir modified: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\config.yaml
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():342] scan: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\conda-environment.yaml conda-environment.yaml
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\config.yaml config.yaml
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\output.log output.log
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\requirements.txt requirements.txt
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-metadata.json wandb-metadata.json
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [dir_watcher.py:finish():356] scan save: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-summary.json wandb-summary.json
+2022-06-07 23:35:50,416 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 7
+2022-06-07 23:35:50,416 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:50,416 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:50,416 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 7
+2022-06-07 23:35:50,432 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:50,432 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-06-07 23:35:50,432 INFO    SenderThread:21896 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-07 23:35:50,541 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,541 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:50,650 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,650 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:50,760 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,760 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:50,869 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,869 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:50,979 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:50,979 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:51,041 INFO    Thread-18 :21896 [upload_job.py:push():132] Uploaded file D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\output.log
+2022-06-07 23:35:51,041 INFO    Thread-17 :21896 [upload_job.py:push():132] Uploaded file D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\config.yaml
+2022-06-07 23:35:51,041 INFO    Thread-16 :21896 [upload_job.py:push():132] Uploaded file D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\conda-environment.yaml
+2022-06-07 23:35:51,057 INFO    Thread-19 :21896 [upload_job.py:push():132] Uploaded file D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\requirements.txt
+2022-06-07 23:35:51,076 INFO    Thread-20 :21896 [upload_job.py:push():132] Uploaded file D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\files\wandb-summary.json
+2022-06-07 23:35:51,092 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:51,092 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:51,201 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:51,201 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:51,295 INFO    Thread-10 :21896 [sender.py:transition_state():389] send defer: 8
+2022-06-07 23:35:51,295 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:51,295 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 8
+2022-06-07 23:35:51,295 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:51,295 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-06-07 23:35:51,310 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:51,842 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 9
+2022-06-07 23:35:51,842 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:51,842 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:51,842 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 9
+2022-06-07 23:35:51,842 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:51,842 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-06-07 23:35:51,842 INFO    SenderThread:21896 [sender.py:transition_state():389] send defer: 10
+2022-06-07 23:35:51,842 DEBUG   SenderThread:21896 [sender.py:send():232] send: final
+2022-06-07 23:35:51,842 DEBUG   SenderThread:21896 [sender.py:send():232] send: footer
+2022-06-07 23:35:51,842 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: defer
+2022-06-07 23:35:51,842 INFO    HandlerThread:21896 [handler.py:handle_request_defer():164] handle defer: 10
+2022-06-07 23:35:51,842 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: defer
+2022-06-07 23:35:51,842 INFO    SenderThread:21896 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-06-07 23:35:51,952 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: poll_exit
+2022-06-07 23:35:51,952 DEBUG   SenderThread:21896 [sender.py:send_request():246] send_request: poll_exit
+2022-06-07 23:35:51,952 INFO    SenderThread:21896 [file_pusher.py:join():150] waiting for file pusher
+2022-06-07 23:35:52,564 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: sampled_history
+2022-06-07 23:35:52,564 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: get_summary
+2022-06-07 23:35:52,564 DEBUG   HandlerThread:21896 [handler.py:handle_request():141] handle_request: shutdown
+2022-06-07 23:35:52,564 INFO    HandlerThread:21896 [handler.py:finish():806] shutting down handler
+2022-06-07 23:35:52,846 INFO    WriterThread:21896 [datastore.py:close():279] close: D:\challege_ai\baseline\results\train\20220607_233538\wandb\run-20220607_233542-1jzu2v90\run-1jzu2v90.wandb
+2022-06-07 23:35:53,472 INFO    SenderThread:21896 [sender.py:finish():1110] shutting down sender
+2022-06-07 23:35:53,472 INFO    SenderThread:21896 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-07 23:35:53,472 INFO    SenderThread:21896 [file_pusher.py:join():150] waiting for file pusher
+2022-06-07 23:35:53,472 INFO    MainThread:21896 [internal.py:handle_exit():80] Internal process exited

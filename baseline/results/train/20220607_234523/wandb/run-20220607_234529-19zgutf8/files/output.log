@@ -1,0 +1,12 @@
+
+Train 0/200
+Traceback (most recent call last):
+  File "D:\challege_ai\baseline\train.py", line 140, in <module>
+    trainer.train(train_l_loader=train_l_loader, train_u_loader=train_u_loader)
+  File "D:\challege_ai\baseline\modules\trainer.py", line 123, in train
+    loss.backward()
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\_tensor.py", line 363, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\autograd\__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Unable to find a valid cuDNN algorithm to run convolution

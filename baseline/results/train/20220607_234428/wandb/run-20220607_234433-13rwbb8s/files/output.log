@@ -1,0 +1,30 @@
+
+Train 0/200
+Traceback (most recent call last):
+  File "D:\challege_ai\baseline\train.py", line 140, in <module>
+    trainer.train(train_l_loader=train_l_loader, train_u_loader=train_u_loader)
+  File "D:\challege_ai\baseline\modules\trainer.py", line 64, in train
+    pred_u, _ = self.ema.model(train_u_data)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\challege_ai\baseline\models\deeplabv3\deeplabv3.py", line 76, in forward
+    feature = self.ASPP(x)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\challege_ai\baseline\models\deeplabv3\aspp.py", line 68, in forward
+    res.append(conv(x))
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\challege_ai\baseline\models\deeplabv3\aspp.py", line 37, in forward
+    x = super(ASPPPooling, self).forward(x)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\modules\batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\functional.py", line 2419, in batch_norm
+    _verify_batch_size(input.size())
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\nn\functional.py", line 2387, in _verify_batch_size
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])

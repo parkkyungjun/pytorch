@@ -1,0 +1,4 @@
+2022-06-07 23:37:46,684 | train | INFO | Set Logger D:\challege_ai\baseline\results\train\20220607_233745
+2022-06-07 23:37:46,730 | train | INFO | Load data, train (labeled):200 train (unlabeled):200 val:200
+2022-06-07 23:37:49,297 | train | INFO | Initiated ealry stopper, mode: max, best score: inf, patience: 10
+2022-06-07 23:37:55,423 | train | INFO | --Train 0/200

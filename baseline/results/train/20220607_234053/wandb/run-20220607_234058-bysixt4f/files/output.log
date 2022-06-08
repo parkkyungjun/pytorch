@@ -1,0 +1,24 @@
+Train 0/200
+D:/challege_ai
+D:/challege_ai
+D:/challege_ai
+D:/challege_ai
+D:/challege_ai
+Traceback (most recent call last):
+  File "D:\challege_ai\baseline\train.py", line 140, in <module>
+    trainer.train(train_l_loader=train_l_loader, train_u_loader=train_u_loader)
+  File "D:\challege_ai\baseline\modules\trainer.py", line 57, in train
+    train_u_data = train_u_dataset.next()
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\utils\data\dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\utils\data\dataloader.py", line 570, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\torch\utils\data\_utils\fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "D:\challege_ai\baseline\modules\datasets.py", line 168, in __getitem__
+    image_root = Image.open(self.root + f'/train/unlabeled_images/{self.idx_list[index]}.jpg')
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\PIL\Image.py", line 2953, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/challege_ai/train/unlabeled_images/challege_ai\\train\\unlabeled_images\\reach_stacker_m4dfXiAbqM.jpg'

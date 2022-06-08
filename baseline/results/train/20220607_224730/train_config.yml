@@ -1,0 +1,31 @@
+DIRECTORY:
+  dataset: D:/challege_ai/train
+TRAINER:
+  model: deeplabv3p
+  optimizer: adamw
+  learning_rate: 0.0005
+  n_epochs: 200
+  early_stopping_target: val_mIoU
+  early_stopping_patience: 10
+  early_stopping_mode: max
+  gpu: 0
+  seed: 42
+  apply_aug: cutout
+  weak_threshold: 0.7
+  strong_threshold: 0.97
+  apply_reco: true
+  temp: 0.5
+  num_queries: 256
+  num_negatives: 512
+MODEL:
+  num_labels: 5
+  output_dim: 256
+DATALOADER:
+  batch_size: 5
+LOGGER:
+  wandb: true
+  logging_interval: 100
+  plot:
+  - loss
+  - mIoU
+  - elapsed_time

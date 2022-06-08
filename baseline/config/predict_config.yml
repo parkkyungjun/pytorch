@@ -1,0 +1,10 @@
+DIRECTORY:
+  sample_submission: 'D:/challege_ai/train'
+
+TRAIN:
+  train_serial: '20220603_131416'
+
+PREDICT:
+  seed: 42
+  gpu: 0
+  batch_size: 1
