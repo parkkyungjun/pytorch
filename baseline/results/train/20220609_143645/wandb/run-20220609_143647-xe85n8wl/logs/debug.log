@@ -1,0 +1,35 @@
+2022-06-09 14:36:47,456 INFO    MainThread:22784 [wandb_setup.py:_flush():76] Loading settings from C:\Users\rudwn\.config\wandb\settings
+2022-06-09 14:36:47,456 INFO    MainThread:22784 [wandb_setup.py:_flush():76] Loading settings from D:\film\pytorch\baseline\wandb\settings
+2022-06-09 14:36:47,456 INFO    MainThread:22784 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-06-09 14:36:47,456 INFO    MainThread:22784 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'baseline\\train.py', 'program': 'D:\\film\\pytorch\\baseline\\train.py'}
+2022-06-09 14:36:47,456 INFO    MainThread:22784 [wandb_init.py:_log_setup():428] Logging user logs to D:\film\pytorch\baseline\results\train\20220609_143645\wandb\run-20220609_143647-xe85n8wl\logs\debug.log
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [wandb_init.py:_log_setup():429] Logging internal logs to D:\film\pytorch\baseline\results\train\20220609_143645\wandb\run-20220609_143647-xe85n8wl\logs\debug-internal.log
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [wandb_init.py:init():462] calling init triggers
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {}
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [wandb_init.py:init():515] starting backend
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2022-06-09 14:36:47,471 INFO    MainThread:22784 [backend.py:ensure_launched():217] starting backend process...
+2022-06-09 14:36:47,580 INFO    MainThread:22784 [backend.py:ensure_launched():222] started backend process with pid: 4556
+2022-06-09 14:36:47,581 INFO    MainThread:22784 [wandb_init.py:init():525] backend started and connected
+2022-06-09 14:36:47,588 INFO    MainThread:22784 [wandb_init.py:init():596] updated telemetry
+2022-06-09 14:36:47,785 INFO    MainThread:22784 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-09 14:37:17,799 WARNING MainThread:22784 [wandb_init.py:init():1020] interrupted
+Traceback (most recent call last):
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\wandb_init.py", line 999, in init
+    run = wi.init()
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\wandb_init.py", line 630, in init
+    run_result = backend.interface.communicate_run(
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\interface\interface.py", line 223, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 324, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 226, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\site-packages\wandb\sdk\interface\router.py", line 37, in get
+    is_set = self._object_ready.wait(timeout)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\rudwn\anaconda3\envs\deeplearning\lib\threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

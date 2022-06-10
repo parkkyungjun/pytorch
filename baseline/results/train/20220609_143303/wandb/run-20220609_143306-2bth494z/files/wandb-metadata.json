@@ -1,0 +1,24 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-06-09T05:33:08.644127",
+    "startedAt": "2022-06-09T05:33:06.650963",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "D:\\film\\pytorch\\baseline\\train.py",
+    "codePath": "baseline\\train.py",
+    "git": {
+        "remote": "https://github.com/parkkyungjun/pytorch.git",
+        "commit": "343534289848d066c66386f60fed5c2e830d8f4a"
+    },
+    "email": "rudwns708@naver.com",
+    "root": "D:/film/pytorch",
+    "host": "LAPTOP-7VD7R8L8",
+    "username": "rudwn",
+    "executable": "C:\\Users\\rudwn\\anaconda3\\envs\\deeplearning\\python.exe"
+}

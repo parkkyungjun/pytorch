@@ -2,7 +2,7 @@ import cv2
 import pandas as pd
 from torchvision import datasets
 import torchvision.transforms as transforms
-from ddddd import init_dataset
+from dataset import init_dataset
 import numpy as np
 import os
 def hflip():
@@ -40,16 +40,23 @@ def hflip():
 # a.to_csv('r_test.csv', index=False)
 os.environ['KMP_DUPLICATE_LIB_OK']= 'True'
 
+# a = os.listdir('D:/film/pytorch/mmsegmentation/configs/_base_/data/custom_dataset/labeled_images/train')
+# b = pd.DataFrame({'file_name': a, 'b': 1})
+# b.to_csv('D:/asddas/user_data/ai.csv', index=False)
 
-data_transformer = transforms.Compose([transforms.ToTensor(), transforms.Resize(250), transforms.CenterCrop((224, 224))])
-train_ds = init_dataset(csv_file='D:/asddas/user_data/train.csv', root_dir='D:/dacon_suhwa/train_299',
-                       transform=data_transformer)
+data_transformer = transforms.Compose([transforms.ToTensor()])
+train_ds = init_dataset(csv_file='D:/asddas/user_data/ai.csv', root_dir='D:/film/pytorch/mmsegmentation/configs/_base_/data/custom_dataset/labeled_images/train',
+                       transform=None)
 
 # train_ds = init_dataset(csv_file='r_test.csv', root_dir='D:/dacon_suhwa/test_299',
 #                            transform=data_transformer)
 
-meanRGB = [np.mean(x.numpy(), axis=(1,2)) for x,_ in train_ds]
-stdRGB = [np.std(x.numpy(), axis=(1,2)) for x,_ in train_ds]
+meanRGB = [np.mean(x, axis=(0, 1)) for x, _ in train_ds]
+stdRGB = [np.std(x, axis=(0, 1)) for x, _ in train_ds]
+
+print(np.array(meanRGB).shape)
+# for i in meanRGB:
+#     print(i)
 
 meanR = np.mean([m[0] for m in meanRGB])
 meanG = np.mean([m[1] for m in meanRGB])

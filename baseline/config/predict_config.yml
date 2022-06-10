@@ -6,5 +6,5 @@ TRAIN:
 
 PREDICT:
   seed: 42
-  gpu: 0
+  gpu: 1
   batch_size: 1

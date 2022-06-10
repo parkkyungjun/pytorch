@@ -1,0 +1,3 @@
+2022-06-09 14:42:37,936 | train | INFO | Set Logger D:\film\pytorch\baseline\results\train\20220609_144237
+2022-06-09 14:42:37,983 | train | INFO | Load data, train (labeled):200 train (unlabeled):200 val:200
+2022-06-09 14:42:40,150 | train | INFO | Initiated ealry stopper, mode: max, best score: inf, patience: 10

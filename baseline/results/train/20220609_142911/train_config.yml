@@ -1,35 +1,31 @@
 DIRECTORY:
-  dataset: D:/challege_ai #개발 경로에 맞게 수정하세요 !
-  
-TRAINER :
+  dataset: D:/challege_ai
+TRAINER:
   model: deeplabv3p
   optimizer: adamw
-  learning_rate: 5.0e-4
+  learning_rate: 0.0005
   n_epochs: 200
   early_stopping_target: val_mIoU
   early_stopping_patience: 10
-  early_stopping_mode: max #min
-  gpu: 1
+  early_stopping_mode: max
+  gpu: 0
   seed: 42
   apply_aug: cutout
   weak_threshold: 0.7
   strong_threshold: 0.97
-  apply_reco: True
+  apply_reco: true
   temp: 0.5
   num_queries: 256
   num_negatives: 512
-  
 MODEL:
   num_labels: 5
   output_dim: 256
-
 DATALOADER:
   batch_size: 2
-
 LOGGER:
-  wandb: True
+  wandb: true
   logging_interval: 100
   plot:
-    - loss
-    - mIoU
-    - elapsed_time
+  - loss
+  - mIoU
+  - elapsed_time

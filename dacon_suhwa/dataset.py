@@ -33,7 +33,7 @@ class init_dataset(Dataset):
 
         if self.transform:
             image = self.transform(image)
-
+        # print(image.shape)
         return image, y_label
 
 

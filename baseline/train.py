@@ -16,6 +16,7 @@ import numpy as np
 import random
 import os
 import copy
+from tqdm import tqdm
 
 import wandb
 import warnings
@@ -47,8 +48,9 @@ np.random.seed(config['TRAINER']['seed'])
 random.seed(config['TRAINER']['seed'])
 
 # GPU
-os.environ['CUDA_VISIBLE_DEVICES'] = str(config['TRAINER']['gpu'])
+#os.environ['CUDA_VISIBLE_DEVICES'] = str(config['TRAINER']['gpu'])
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Operating device: {device}")
 
 if __name__ == '__main__': 
     """
@@ -125,7 +127,7 @@ if __name__ == '__main__':
     """
     # Train
     n_epochs = config['TRAINER']['n_epochs']
-    for epoch_index in range(n_epochs):
+    for epoch_index in tqdm(range(n_epochs)):
 
         # Set Recorder row
         row_dict = dict()

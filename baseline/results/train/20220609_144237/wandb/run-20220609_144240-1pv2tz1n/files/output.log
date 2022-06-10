@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "D:\film\pytorch\baseline\train.py", line 130, in <module>
+    for epoch_index in tqdm(range(n_epochs)):
+TypeError: 'module' object is not callable
